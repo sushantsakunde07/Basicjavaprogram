@@ -2,15 +2,20 @@ package Basicjavaprogram;
 import java.util.*;
 public class Javabasicprogram {
 public static void main(String[] args) {
-	Scanner scan =new Scanner (System.in);
-    System.out.println("Enter a sentence");
-    String str =scan.nextLine();
-    scan.close();
-    for(int i=0; i<str.length(); i++) {
-    if(str.charAt(i) == 'a'|| str.charAt(i) == 'e'|| str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' || str.charAt(i) == 'A'||str.charAt(i) == 'E'||str.charAt(i) == 'I'||str.charAt(i) == 'O'||str.charAt(i) == 'U')
-    {
-      System.out.println("Given sentence contains "+str.charAt(i)+" at the index "+i);
-    }
-}
+	int number1, number2, number3;
+    System.out.println("Enter three integers");
+    Scanner in = new Scanner(System.in);
+    number1 = in.nextInt();
+    number2 = in.nextInt();
+    number3 = in.nextInt();
+    in.close();
+    if (number1 > number2 && number1 > number3)
+      System.out.println("First number is the largest.");
+    else if (number2 > number1 && number2 > number3)
+      System.out.println("Second number is the largest.");
+    else if (number3 > number1 && number3 > number2)
+      System.out.println("Third number is the largest.");
+    else
+      System.out.println("The numbers are not distinct.");	    
 }
 }
