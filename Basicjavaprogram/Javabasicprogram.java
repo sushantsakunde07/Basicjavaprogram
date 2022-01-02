@@ -3,14 +3,18 @@ import java.util.*;
 public class Javabasicprogram {
 	public static void main(String[] args)
 	{
-	int year=0;
+	int N=0,number=0;
 	Scanner scan = new Scanner(System.in);
-	System.out.println("Enter Year");
-    year=scan.nextInt();
+	System.out.println("Enter Nth number");
+    N=scan.nextInt();
 	scan.close();
-	if(year%4==0 && year%100!=0 || year%400==0)
-	  System.out.println("It is Leap year");
-	else
-	  System.out.println("It is Not a leap year");
+	if (0 <= N && N < 31) {
+	for (int i=0; i<N;i++) {
+		number=(int)Math.pow(2,i);
+		System.out.println(" "+number);	
+	}}
+	else {
+		  System.out.println("Enter number less than 31 and greater than minus 1");
+	}
 }
 }
